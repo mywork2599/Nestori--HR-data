@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestori - HR Employee Registration</title>
+    <link rel="icon" type="image/x-icon" href="../favicon_Nestori/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_Nestori/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_Nestori/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_Nestori/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon_Nestori/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../favicon_Nestori/android-chrome-512x512.png">
+    <link rel="manifest" href="../favicon_Nestori/site.webmanifest">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../Nestori-CustomerCare/support.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+            <div class="container">
+                <a class="navbar-brand logo" href="#">Nestori</a>
+                <div class="navbar-nav ml-auto">
+                    <span class="navbar-text">HR Portal</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1 class="mb-4"><i class="fas fa-user-plus"></i> HR Employee Registration Portal</h1>
+            <div class="card">
+                <div class="card-body">
+            <form id="registrationForm">
+                <h4 class="mb-3">Personal Information</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" id="address" rows="3" required></textarea>
+                </div>
+
+                <h4 class="mb-3 mt-4">Employment Information</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="employeeId">Employee ID</label>
+                            <input type="text" class="form-control" id="employeeId" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <select class="form-control" id="department" required>
+                                <option value="">Select Department</option>
+                                <option value="customer-support">Customer Support</option>
+                                <option value="technical-support">Technical Support</option>
+                                <option value="billing">Billing</option>
+                                <option value="hr">HR</option>
+                                <option value="management">Management</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <input type="text" class="form-control" id="position" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" class="form-control" id="startDate" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input type="number" class="form-control" id="salary" step="0.01" required>
+                </div>
+
+                <h4 class="mb-3 mt-4">Account Setup</h4>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                        I agree to the terms and conditions
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Register Employee</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#registrationForm').submit(function(e) {
+                e.preventDefault();
+
+                var password = $('#password').val();
+                var confirmPassword = $('#confirmPassword').val();
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+
+                // Collect form data
+                var employeeData = {
+                    firstName: $('#firstName').val(),
+                    lastName: $('#lastName').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    address: $('#address').val(),
+                    employeeId: $('#employeeId').val(),
+                    department: $('#department').val(),
+                    position: $('#position').val(),
+                    startDate: $('#startDate').val(),
+                    salary: $('#salary').val(),
+                    username: $('#username').val(),
+                    password: password
+                };
+
+                // In a real application, this would be sent to a server
+                console.log('Employee Data:', employeeData);
+
+                // Store in localStorage for demo purposes
+                var employees = JSON.parse(localStorage.getItem('employees') || '[]');
+                employees.push(employeeData);
+                localStorage.setItem('employees', JSON.stringify(employees));
+
+                alert('Employee registered successfully!');
+                $('#registrationForm')[0].reset();
+            });
+        });
+    </script>
+</body>
+</html>
